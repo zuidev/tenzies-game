@@ -12,7 +12,7 @@ function App() {
     const isWin = dices.every((currentValue) => currentValue.isHeld && currentValue.value === dices[0].value)
     if (isWin) {
       setTenzies(true)
-      console.log("you win")
+      console.log("You won!")
     }
   }, [dices])
 
