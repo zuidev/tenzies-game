@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import Die from "./Die";
+import Die from "./components/Die";
 import { nanoid } from "nanoid"
 import Confetti from "react-confetti";
+import Footer from "./components/Footer";
 
 function App() {
   const [dices, setDices] = useState(allNewDice())
@@ -63,9 +64,9 @@ function App() {
   ))
 
   return (
-    <div className="wrap-content">
+    <main className="wrap-content">
       {tenzies && <Confetti width={window.innerWidth} height={window.innerHeight} />}
-      <main className="container">
+      <div className="container">
         <h1 className="title">Tenzies game</h1>
         <p className="instructions">Chọn để giữ số lại, Roll và chọn cho tới khi 10 số giống nhau thì bạn sẽ chiến thắng!</p>
         <div className="die-container">
@@ -77,8 +78,9 @@ function App() {
         >
           {tenzies ? "New game" : "Roll"}
         </button>
-      </main>
-    </div>
+      </div>
+      <Footer />
+    </main>
   );
 }
 
