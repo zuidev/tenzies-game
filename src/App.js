@@ -63,11 +63,11 @@ function App() {
   ))
 
   return (
-    <div>
+    <div className="wrap-content">
       {tenzies && <Confetti width={window.innerWidth} height={window.innerHeight} />}
       <main className="container">
         <h1 className="title">Tenzies game</h1>
-        <p className="instructions">Roll và chọn được 10 số giống nhau và bạn sẽ chiến thắng!</p>
+        <p className="instructions">Chọn để giữ số lại, Roll và chọn cho tới khi 10 số giống nhau thì bạn sẽ chiến thắng!</p>
         <div className="die-container">
           {diceElements}
         </div>
